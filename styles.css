@@ -72,12 +72,21 @@
 .photo-grid-container {
     display: flex;
     justify-content: center;
+    background-color: pink;
 }
 
 .photo-grid {
     width: 900px;
+    height: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+}
+
+.photo-grid-item {
+    border: 1px solid #fff;
+    width: 200px;
+    height: 125px;
 }
