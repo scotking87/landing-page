@@ -65,7 +65,7 @@
 }
 
 .button1:hover {
-    background-color: #1f2937; /* Green */
+    background-color: #1f2937;
     color: white;
   }
 
@@ -86,7 +86,55 @@
 }
 
 .photo-grid-item {
+    position: relative;
     border: 1px solid #fff;
     width: 200px;
     height: 125px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #1f2937;
+}
+
+.photo-grid-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.list {
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overscroll-behavior: contain;
+    -ms-overflow-style: none;
+}
+
+/* .list::-webkit-scrollbar { display: none; } */
+
+.gallery {
+    height: 450px;
+    width: auto;
+    flex-shrink: 0;
+}
+
+.item:not(:last-child) {
+    margin-right: 10px;
 }
